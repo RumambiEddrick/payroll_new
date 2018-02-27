@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Payroll</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/website.css' %}">
+    </head>
+
+
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Payroll App</a></h1>
+
+            <div class="tab">
+              <button class="tablinks" onclick="location.href='http://127.0.0.1:8000/payroll';">Payroll</button>
+              <button class="tablinks" onclick="location.href='http://127.0.0.1:8000/member';">Member</button>
+              <button class="tablinks" onclick="document.getElementById('id01').style.display='block'">Login</button>
+            </div>
+        </div>
+
+        <div class="content">
+            {%block content %}
+            {% endblock %}
+        </div>
+        
+        
+    </body>
+</html>
