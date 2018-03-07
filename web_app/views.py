@@ -14,5 +14,5 @@ def homepage(request):
 def payroll(request):
     return render(request, 'web_app/payroll.html', {})
 
-def member(request):
-    return render(request, 'web_app/member.html', {})
+def employee(request):
+    return render(request, 'web_app/employee.html', {})

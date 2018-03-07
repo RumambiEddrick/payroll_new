@@ -6,5 +6,5 @@ urlpatterns = [
     url(r'^home$', views.homepage, name='homepage'),
     url(r'^account$', views.accpage, name='accpage'),
     url(r'^payroll$', views.payroll, name='payroll'),
-    url(r'^member$', views.member, name='member'),
+    url(r'^employee$', views.employee, name='employee'),
 ]

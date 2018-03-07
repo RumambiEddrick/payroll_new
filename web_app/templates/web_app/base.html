@@ -10,21 +10,36 @@
 
 
     <body>
-        <div class="page-header">
-            <h1><a href="/">Payroll App</a></h1>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="http://127.0.0.1:8000/payroll">Payroll</a>
+          <a href="http://127.0.0.1:8000/employee">Employee</a>
+          <a href="http://127.0.0.1:8000/account">Account</a>
+          <a href="#">Logout</a>
+        </div>
 
-            <div class="tab">
-              <button class="tablinks" onclick="location.href='http://127.0.0.1:8000/payroll';">Payroll</button>
-              <button class="tablinks" onclick="location.href='http://127.0.0.1:8000/member';">Member</button>
-              <button class="tablinks" onclick="document.getElementById('id01').style.display='block'">Login</button>
+        <div id="main">
+            <div class="page-header">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()"><h2>&#9776;</h2>
+                    <h1><a href="/">Payroll App</a></h1></span>
+            </div>
+
+            <div class="content">
+                {%block content %}
+                {% endblock %}
             </div>
         </div>
 
-        <div class="content">
-            {%block content %}
-            {% endblock %}
-        </div>
-        
-        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
     </body>
 </html>
