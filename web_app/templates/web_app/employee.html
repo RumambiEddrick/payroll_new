@@ -1,5 +1,93 @@
 {% extends 'web_app/base.html' %}
-{% block content %}
-	<p>member page</p>
+{% load staticfiles %}
 
+{% block styles %}
+	<link rel="stylesheet" href="{% static 'css/table.css' %}">
+  <link rel="stylesheet" href="{% static 'css/monthly_table.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block content %}
+<table id="table">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr class="data">
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr class="data">
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr class="data">
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr class="data">
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr class="data">
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+
+<div class="buttons">
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add</button>
+  <button style="width:auto">Edit</button>
+  <button style="width:auto">Delete</button>
+</div>
+
+<div id="id01" class="modal">  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <br>
+    <div class="container">
+      <label for="uname"><b>Employee Number</b></label><br>
+      <input type="text" placeholder="Enter New Employee's Number" name="uname" required>
+      <br>
+      <label for="psw"><b>Employee Name</b></label><br>
+      <input type="password" placeholder="Enter New Employee's Name" name="psw" required>
+      <br>
+      <button type="submit">Add</button>
+    </div>
+
+    <div class="bottomcontainer" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+$("#table data").click(function(){
+   $(this).addClass('selected').siblings().removeClass('selected');
+   var value=$(this).find('td:first').html();
+</script>
 {% endblock %}
