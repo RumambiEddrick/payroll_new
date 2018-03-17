@@ -14,10 +14,14 @@ tr:nth-child(even) {
     background-color: lightgray;
 }
 
-.data:hover {
-	 background-color: lightblue !important;
+thead {
+	background-color: gray;
+}
+
+tbody tr:hover{
+	background-color: lightblue !important;
 }
 
 .selected {
-	background-color: lightgreen !important;
+	background-color: lightblue !important;
 }
