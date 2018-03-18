@@ -4,9 +4,10 @@
 <head>
   <title></title>
   <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <link >
 </head>
 <body>
-  <form action="{% url 'payroll' %}">
+  <form onsubmit="openpage()">
     <div class="container">
       <center><h2>Login</h2></center>
       <label for="uname"><b>Username</b></label><br>
@@ -15,7 +16,7 @@
       <label for="psw"><b>Password</b></label><br>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit">Login</button>
+      <button type="submit" onsubmit="openpage()">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -25,6 +26,20 @@
       <button type="button" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
-  </form> 
+  </form>
+
+  <p id="demo"></p>
+
+  <script>
+    function openpage() {
+      if user.is_authenticated{
+        window.open("http://127.0.0.1:8000/employee");
+      }
+      else{
+        document.getElementById("demo").innerHTML = 'wrong entry';
+      }
+    }
+
+  </script> 
 </body>
 </html>
