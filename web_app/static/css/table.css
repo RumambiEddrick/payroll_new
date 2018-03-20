@@ -4,8 +4,8 @@ table {
     width: 100%;
 }
 
-td, th {
-    border: 1px solid #dddddd;
+ td, th {
+    border: 1px solid black;
     text-align: left;
     padding: 8px;
 }
@@ -18,10 +18,18 @@ thead {
 	background-color: gray;
 }
 
+tbody tr {
+    border: 1px solid black;
+}
+
 tbody tr:hover{
-	background-color: lightblue !important;
+	background-color: green !important;
 }
 
 .selected {
-	background-color: lightblue !important;
+	background-color: green !important;
+}
+
+.narrow {
+    width: 100px
 }
