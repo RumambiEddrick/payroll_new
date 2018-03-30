@@ -18,7 +18,7 @@
 </div>
 <br><br>
 
-<table id="table">
+<table>
   <thead>
     <th>Employee name</th>
     <th>Hour Worked</th>
@@ -42,6 +42,26 @@
     </tr>
   </tbody>
 </table>
+
+<!--<script type="php">
+      $servername = "localhost";
+      $username = "username";
+      $password = "password";
+      $dbname = "payroll_db";
+
+      // Create connection
+      $conn = new mysqli($dbname);
+
+      $result = mysqli_query($con,"SELECT * FROM employee");
+      while($row = mysqli_fetch_array($result)){
+        echo "<tr>";
+        echo "<td>" . $row['Emp. No'] . "</td>";
+        echo "<td>" . $row['Employee name'] . "</td>";
+        echo "<td>" . $row['Salary'] . "</td>";
+        echo "</tr>";
+        }
+      echo</tbody>;
+    </script>-->
 
 <script>
   function highlight(e) {

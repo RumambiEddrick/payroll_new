@@ -22,14 +22,6 @@ tbody tr {
     border: 1px solid black;
 }
 
-tbody tr:hover{
-	background-color: green !important;
-}
-
-.selected {
-	background-color: green !important;
-}
-
 .narrow {
     width: 100px
 }
