@@ -15,3 +15,6 @@ def payroll(request):
 
 def employee(request):
     return render(request, 'web_app/employee.html', {})
+
+def dailyrep(request):
+    return render(request, 'web_app/daily.html', {})

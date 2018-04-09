@@ -1,0 +1,69 @@
+{% extends 'web_app/base.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+{% endblock %}
+
+{% block content %}
+<p>Date:</p>
+<div class="drop">
+   <select>
+    <option value="2/1/2018">2/1/2018</option>
+    <option value="2/2/2018">2/2/2018</option>
+    <option value="2/3/2018">2/3/2018</option>
+    <option value="2/4/2018">2/4/2018</option>
+  </select>
+</div><br>
+
+<table id="table">
+  <thead>
+    <th>Employee Name</th>
+    <th>Clock-in 1</th>
+    <th>Clock-out 1</th>
+    <th>Clock-in 2</th>
+    <th>Clock-out 2</th>
+    <th>Total</th>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td>Ray</td>
+  		<td>-</td>
+  		<td>-</td>
+      <td>-</td>
+      <td>-</td>
+  	</tr>
+  	<tr>
+  		<td>Hanissar</td>
+  		<td>07.47</td>
+  		<td>12.00</td>
+  		<td>13.05</td>
+  		<td>17.36</td>
+  		<td>8.44</td>
+  	</tr>
+  	<tr>
+  		<td>Lia</td>
+  		<td>07.46</td>
+  		<td>11.48</td>
+  		<td>13.14</td>
+  		<td>17.37</td>
+  		<td>7.25</td>
+  	</tr>
+    <tr>
+      <td>Clara</td>
+      <td>07.46</td>
+      <td>11.47</td>
+      <td>13.28</td>
+      <td>17.36</td>
+      <td>7.09</td>
+    </tr>
+    <tr>
+      <td>Tenri</td>
+      <td>07.48</td>
+      <td>12.20</td>
+      <td>12.58</td>
+      <td>17.36</td>
+      <td>8.10</td>
+  </tbody>
+
+{% endblock %}

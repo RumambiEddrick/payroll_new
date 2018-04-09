@@ -1,0 +1,32 @@
+{% extends 'web_app/base.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+  	<link rel="stylesheet" href="{% static 'css/accpage.css' %}">
+{% endblock %}
+
+{% block content %}
+ <fieldset>
+	 <legend>Account info</legend>
+	 <label for="acc_name"><b>Account name:</b></label><br>
+	 <input type="text" placeholder="Account Name" name="acc_name" id="acc_name">
+	 <br>
+	 <label for="acc_pwd"><b>Password:</b></label><br>
+	 <input type="text" placeholder="Password" name="acc_pwd" id="acc_pwd">
+ </fieldset>
+<br><br><br>
+ <fieldset>
+ 	<legend>Update Account</legend>
+ 	<label for="newacc_name"><b>New Account name:</b></label><br>
+	<input type="text" placeholder="Account Name" name="newacc_name" id="newacc_name">
+	<br>
+	<label for="newacc_pwd"><b>New Password:</b></label><br>
+	<input type="text" placeholder="Password" name="newacc_pwd" id="newacc_pwd">
+	<br>
+	<label for="newacc_pwdconf"><b>Confirm New Password:</b></label><br>
+	<input type="text" placeholder="Password" name="newacc_pwdconf" id="newacc_pwdconf">
+	<div class="buttons">
+		<button style="width:auto">Update</button>
+	</div>
+ </fieldset>
+{% endblock %}
